@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style type="text/css">
+		body {
+            background-image: url("https://www.gvsu.edu/cms4/asset/0DBA5D42-CF6E-47EE-189D48B651FB2947/header/8D12EB9A-B9FF-5F82-91947615C97E33A4/2000[1509983216].jpg");
+			background-color: #f8f9fa;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.container {
+			margin-top: 50px;
+		}
+		.card {
+			border-radius: 10px;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+		}
+		.card-header {
+			background-color: #007bff;
+			color: #fff;
+			text-align: center;
+			border-radius: 10px 10px 0 0;
+		}
+		.card-body {
+			padding: 20px;
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.btn-login {
+			background-color: #007bff;
+			border-color: #007bff;
+			border-radius: 25px;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 10px 25px;
+			transition: all 0.3s ease;
+		}
+		.btn-login:hover {
+			background-color: #fff;
+			color: #007bff;
+		}
+		.error {
+			color: #dc3545;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header">
+						<h4>Login</h4>
+					</div>
+					<div class="card-body">
+						<form id="login-form">
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="password" name="password" id="password" class="form-control" required>
+							</div>
+							<div class="form-group text-center">
+								<button type="submit" class="btn btn-login">Login</button>
+							</div>
+							<div class="text-center">
+								<span class="error" id="error-message"></span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- Custom JS -->
+	<script>
+        $(function() {
+            // Submit login form
+            $('#login-form').submit(function(e) {
+                e.preventDefault();
+                var email = $('#email').val();
+                var password = $('#password').val();
+        
+                // Check if email and password are valid
+                if (email == 'test@gvsu.com' && password == 'password') {
+                    // If valid, redirect to dashboard page
+                    window.location.href = 'index.html';
+                } else {
+                    // If not valid, display error message
+                    $('#error-message').html('Invalid email or password.');
+                }
+            });
+        });
+    </script>
+    </body>
+    </html>
