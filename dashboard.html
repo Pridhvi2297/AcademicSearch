@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Academic Search</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+	</head>
+	<body class="is-preload">
+
+			<div id="wrapper">
+
+					<div id="main">
+						<div class="inner">
+
+								<header id="header">
+									<a href="dashboard.html" class="logo"><strong>Academic Search</strong></a>
+								</header>
+
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Welcome to Academic Search....</h1>
+										</header>
+										<p>This page will help to find the Majors, Programs, Certificates, and Badges in GVSU</p>
+									</div>
+								</section>
+
+								<section>
+									<header class="major">
+										<h2>UNIVERSITY REQUIREMENTS</h2>
+									</header>
+									<div class="features">
+										<article>
+											<div class="content">
+												<h3>GENERAL REQUIREMENTS</h3>
+												<p>•	The last 30 semester hours toward a baccalaureate degree must be earned in Grand Valley courses.</p>
+												<p>•	A minimum of 58 semester hours must be earned at a senior institution.</p>
+												<p>•	Courses numbered below 100 do not apply toward the minimum 120 semester hours needed to graduate.</p>
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<h3>SUPPLEMENTAL WRITING SKILLS (SWS)</h3>
+												<p>•	SWS courses should be taken after fulfillment of GE Foundations - Writing.</p>
+												<p>•	You must receive a grade of C (not C-) or better in GE Foundations - Writing and both SWS courses to fulfill this requirement.</p>
+												<p>___SWS Course #1</p>
+												<p>___SWS Course #2</p>
+												<p></p>
+											</div>
+										</article>
+										<article>
+											<div class="content">
+												<h3>GENERAL EDUCATION REQUIREMENT CHECKLIST</h3>
+												<p>•	WRT 120/130 or WRT 150</p>
+												<p>•	Physical Sciences</p>
+												<p>•	Life Sciences</p>
+												<p>•	Art</p>
+												<p>•	Philosophy and Literature</p>
+												<p>•	Mathematical Sciences</p>
+												<p>•	Historical Analysis</p>
+												<p>•	Social and Behavioral Sci. #1 (must be 2 different prefixes)</p>
+												<p>•	Social and Behavioral Sci. #2 (must be 2 different prefixes)</p>
+												<p>•	Global Perspectives</p>
+												<p>•	U.S. Diversity</p>
+												<p>•	Issues #1 (must be 2 different prefixes)</p>
+												<p>•	Issues #2 (must be 2 different prefixes)</p>
+											</div>
+										</article>
+									</div>
+								</section>
+
+								<section>
+									<header class="major">
+										<h2>Key for this page</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<h3>KEY</h3>
+												<p>(A)	Arts</p>
+												<p>(HA) Historical Analysis</p>
+												<p>(I)	Issues</p>
+												<p>(I-G)	Globalization </p>
+												<p>(I-H) Health</p>
+												<p>(I-HR) Human Rights </p>
+												<p>(I-I)	Identity</p>
+												<p>(I-IIT) Information, Innovation, or Technology </p>
+												<p>(I-S)	Sustainability</p>
+												<p>(PL) Philosophy and Literature </p>
+												<p>(SBS) Social and Behavioral Sciences </p>
+												<p>(US) U.S. Diversity</p>
+												<p>(GP)  Global Perspectives</p>
+										</article>
+										<article>
+											<h3>Indications</h3>
+											<p>( )	Indicates course also fulfills a second General Education category</p>
+											<p>*	This requirement may be fulfilled through study abroad. Contact the Padnos International Center for details.</p>
+											<p>**	This requirement is automatically fulfilled through study abroad. Contact the Padnos International Center for details.</p>
+										</article>
+									</div>
+								</section>
+								<section>
+									<header class="major">
+										<h2>Notes.   </h2>
+									</header>
+										
+									<div class="posts">
+										<article>
+											<h3>To Know...</h3>
+												<p>Courses in the General Education Program are subject to change without notice. Consult myBanner for the most current information.</p>
+												<p>All courses are three credits unless otherwise indicated.</p>
+									</article>
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+					<div id="sidebar">
+						<div class="inner">
+
+								<section>
+									<form>
+										<input type="text" id="input" placeholder="Search" >
+										<p></p>
+										<button onclick="searchInPage()">Search</button>
+									</form>
+								</section>
+
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="dashboard.html">Homepage</a></li>
+										<li><a href="foundations.html">Foundations</a></li>
+										<li><a href="cultures.html">CULTURES</a></li>
+										<li><a href="cultures.html">ISSUES</a></li>
+										<li><a href="cultures.html">ACADEMIC ADVISING CENTERS</a></li>
+										<li>
+											
+									<div style="text-align:center;">
+									<a href="index.html"><h1 style="color:red";>Logout</h1></a>
+									</div>
+										</li>
+									</ul>
+									
+								</nav>
+						</div>
+					</div>
+
+			</div>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				$(function() {
+					// Show/hide search methods based on user status
+					var userStatus = 'sophomore'; // Replace with actual user status
+					if (userStatus == 'freshman' || userStatus == 'sophomore') {
+						$('#category-search').show();
+					}
+					if (userStatus != 'freshman' && userStatus != 'sophomore') {
+						$('#discipline-search').show();
+					}
+					if (userStatus == 'admin') {
+						$('#criteria-search').show();
+					}})
+				
+			</script>
+
+	</body>
+</html>
